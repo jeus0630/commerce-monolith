@@ -3,6 +3,7 @@ package com.jewoo.commerce.common.config;
 import com.jewoo.commerce.common.interceptor.HttpLoggingInterceptor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -22,6 +23,13 @@ public class WebConfig implements WebMvcConfigurer {
                         "/actuator/**",
                         "/favicon.ico"
                 );
+    }
+
+    @Override
+    public void addCorsMappings(CorsRegistry registry) {
+        registry.addMapping("/**")
+                .allowedOrigins("*")
+                .allowedMethods("*");
     }
 
 }

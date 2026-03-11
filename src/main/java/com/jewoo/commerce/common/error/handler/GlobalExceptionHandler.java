@@ -1,5 +1,6 @@
 package com.jewoo.commerce.common.error.handler;
 
+import com.jewoo.commerce.common.error.response.FieldErrorDetail;
 import com.jewoo.commerce.common.error.code.CommonErrorCode;
 import com.jewoo.commerce.common.error.exception.BusinessException;
 import com.jewoo.commerce.common.error.response.ErrorResponse;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 
 import java.util.List;
+
 
 @Slf4j
 @RestControllerAdvice

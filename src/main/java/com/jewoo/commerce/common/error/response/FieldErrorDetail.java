@@ -1,4 +1,4 @@
-package com.jewoo.commerce.common.error.handler;
+package com.jewoo.commerce.common.error.response;
 
 public record FieldErrorDetail(
         String field,
